@@ -169,3 +169,15 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Ignore audio files
+*.mp3
+*.wav
+
+# Ignore sensitive data
+*.env
+
+# Ignore React/React Native future files
+node_modules/
+build/
+*.log
