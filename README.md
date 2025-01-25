@@ -1,10 +1,5 @@
-# VoiceManipulationProject
-its project for computiantonal linguestic class that help me manipulate voice.
-
-### **Updated README.md**
-
-```markdown
 # Voice Manipulation Project
+its project for computiantonal linguestic class that help me manipulate voice.
 
 ## Overview
 This project explores voice manipulation techniques, inspired by our university learnings from Praat. The primary goal is to manipulate audio files (e.g., reverse segments, change pitch, and alter voice parameters) to determine how much we can change a voice while keeping it recognizable to humans.
