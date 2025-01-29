@@ -114,7 +114,7 @@ This project is licensed under the **Apache License 2.0**.
 All credits must go to:
 - **Project Team**:
   - [Mohammad Hossein (darius) Bayat](https://www.linkedin.com/in/mohammad-hosein-bayat/)
-  - Name2
+  - [Shahrzad Ziaei]
   - Name3
   - Name4
   - Name5
