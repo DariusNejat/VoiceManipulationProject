@@ -70,6 +70,7 @@ python main.py --file data/sample.wav --action reverse --segment 0-10
   - Combine all libraries using a central `__init__.py`.
   - keep in mind the data structure you want to pass to each function in the flow,be it all voice or array of segments, or single segment and do loop over it is all upto your decision.
   - you can even merge all functions in 1 library or have multi libraries and pipeline as our suggestion.
+  - since we want to have pipeline and series of libraries, suggestion is to have array of audios as input in which later on we concat and have more flexible approch.
 
 ### **Workflow**
 1. Clone the Repository:
