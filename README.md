@@ -11,8 +11,10 @@ This project explores voice manipulation techniques, inspired by our university 
 ## Features
 - **Voice Segmentation**: Split audio files into segments for processing.
 - **Reverse Segments**: Reverse specific parts of audio files.
-- **Pitch Manipulation**: Adjust the pitch of voices.
-- **Additional Voice Alterations**: Apply other voice parameter modifications.
+- **Silent Segments**: Silent specific parts of audio files.
+- **Pitch Manipulation**: Adjust the pitch of voices. (for future developement)
+- **Additional Voice Alterations**: Apply other voice parameter modifications. (future developement)
+- **Voice Concatanation**: Merge audio files segement into 1 single audio.
 
 ---
 
