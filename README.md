@@ -120,7 +120,7 @@ All credits must go to:
 - **Project Team**:
   - [Mohammad Hossein (darius) Bayat](https://www.linkedin.com/in/mohammad-hosein-bayat/)
   - [Shahrzad Ziaei]
-  - Name3
+  - [Niyayesh Yousefi]
   - Name4
   - Name5
   - Name6
