@@ -121,7 +121,7 @@ All credits must go to:
   - [Mohammad Hossein (darius) Bayat](https://www.linkedin.com/in/mohammad-hosein-bayat/)
   - [Shahrzad Ziaei]
   - [Niyayesh Yousefi]
-  - Name4
+  - [Haniye Mahmoodi](https://www.linkedin.com/in/haniye-mahmoodi-1608781bb)
   - Name5
   - Name6
   - Name7
