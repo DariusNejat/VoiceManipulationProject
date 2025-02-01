@@ -25,7 +25,7 @@ def main():
     # Apply the processing pipeline
     print("Applying manipulations...")
     audio = segment_voice(audio, sr)  # Function from library1
-    audio = reverse_segment(audio, sr)  # Function from library2
+    audio = reverse_segments(audio, sr,pattern="1 * n + 0")  # Function from library2
     audio = change_pitch(audio, sr, pitch_shift=2)  # Function from library3
     audio = adjust_speed(audio, sr, speed_factor=1.5)  # Function from library4
 
