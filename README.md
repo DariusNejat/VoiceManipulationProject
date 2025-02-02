@@ -123,7 +123,7 @@ All credits must go to:
   - [Niyayesh Yousefi]
   - [Haniye Mahmoodi](https://www.linkedin.com/in/haniye-mahmoodi-1608781bb)
   - [Behnam Nazari](https://www.linkedin.com/in/behnam-nazari0097/)
-  - Name6
+  - [MohammadHossein Mortazavi](https://www.linkedin.com/in/mhmortazavi/)
   - [Emad Ziarati](https://www.linkedin.com/in/emad-ziarati-0b95bb2b8)
 
 ### **Apache License 2.0**
