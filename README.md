@@ -124,7 +124,7 @@ All credits must go to:
   - [Haniye Mahmoodi](https://www.linkedin.com/in/haniye-mahmoodi-1608781bb)
   - [Behnam Nazari](https://www.linkedin.com/in/behnam-nazari0097/)
   - Name6
-  - Name7
+  - [Emad Ziarati](https://www.linkedin.com/in/emad-ziarati-0b95bb2b8)
 
 ### **Apache License 2.0**
 You are free to use, modify, and distribute this project, but you must credit the original authors.  

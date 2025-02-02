@@ -17,5 +17,6 @@ __all__ = [
     "adjust_speed",
     "raise_voice",
     "tone_down",
+    "concatenate_segments",
     # Add more functions here as needed
 ]
