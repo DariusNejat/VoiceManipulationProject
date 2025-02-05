@@ -27,7 +27,7 @@ def main():
     audio = segment_voice(audio, sr)  # Function from library1
     audio = reverse_segments(audio, sr)  # Function from library2
     audio = smooth_audio_list(audio, sr, pitch_shift=2)  # Function from library3
-    audio = adjust_speed(audio, sr, speed_factor=1.5)  # Function from library4
+    audio = segment_audio_list(audio_arrays, sample_rate, num_segments)  # Function from library4
     # Function from library5
     audio = concatenate_segments(audio)  # Function from library6
 
