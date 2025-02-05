@@ -28,6 +28,8 @@ def main():
     audio = reverse_segments(audio, sr)  # Function from library2
     audio = smooth_audio_list(audio, sr, pitch_shift=2)  # Function from library3
     audio = adjust_speed(audio, sr, speed_factor=1.5)  # Function from library4
+    # Function from library5
+    audio = concatenate_segments(audio)  # Function from library6
 
     # Save the output audio
     output_file = os.path.join(OUTPUT_FOLDER, "manipulated_sample1.wav")
