@@ -33,7 +33,7 @@ def smooth_audio_list(audio_arrays, sample_rate, fade_percentage=15):
 
 import unittest
 import numpy as np
-from .smoothing import smooth_audio_list
+#from .smoothing import smooth_audio_list niyayesh fix this issue
 
 #This is a test for the smooth_audio_list function.
 

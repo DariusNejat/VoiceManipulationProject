@@ -28,7 +28,7 @@ def pattern_decoder(pattern:str):
     return multiplier,constant
 
 
-def reverse_segments(segments_list: list,sr,pattern: str = '2 * n + 0'):
+def reverse_segments(segments_list: list,pattern: str = '2 * n + 0'):
     
     """
     Reverses the segments whose index follows the pattern.
