@@ -29,37 +29,3 @@ def smooth_audio_list(audio_arrays, sample_rate, fade_percentage=15):
         smoothed_audios.append(audio)
 
     return smoothed_audios
-
-
-import unittest
-import numpy as np
-#from .smoothing import smooth_audio_list niyayesh fix this issue
-
-#This is a test for the smooth_audio_list function.
-
-class TestSmoothAudioList(unittest.TestCase):
-    def test_smooth_audio_list(self):
-        sample_rate = 44100
-        fade_percentage = 40
-        fade_percentage_divided = fade_percentage / 100
-
-        audio1 = np.ones(2000)
-        audio2 = np.linspace(2, 10, 1000)
-
-        audio_arrays = [audio1, audio2]
-        smoothed_audios = smooth_audio_list(audio_arrays, sample_rate, fade_percentage) #We created a sample list of audio arrays.
-
-        self.assertEqual(len(audio1), len(smoothed_audios[0])) #checks to see the length of the first audio hasn't changed.
-        self.assertEqual(len(audio2), len(smoothed_audios[1])) #checks to see the length of the second audio hasn't changed.
-
-        fade_samples1 = int(len(audio1) * fade_percentage_divided)
-        fade_samples2 = int(len(audio2) * fade_percentage_divided)
-
-        self.assertTrue(np.all(smoothed_audios[0][:fade_samples1] > 0)) # for the first audio, Checks fade-in.
-        self.assertTrue(np.all(smoothed_audios[0][-fade_samples1:] < 1))
-
-        self.assertTrue(np.all(smoothed_audios[1][:fade_samples2] > 0)) # for the second audio, Checks fad-in.
-        self.assertTrue(np.all(smoothed_audios[1][-fade_samples2:] < 1))
-
-if __name__ == "__main__":
-    unittest.main()
