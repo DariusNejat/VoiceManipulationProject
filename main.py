@@ -30,7 +30,6 @@ def main():
     audiolist = segment_audio_list(audio, sr, num_segments)  # Function from library1
     match method:
         case "mute":
-            print("You can become a web developer.")
             audiolist = manipulate_segments(audiolist, "mute", sr, 'white', 0.5) # Function from library3
         case "whitenoise":
             audiolist = manipulate_segments(audiolist, "noise", sr, 'white', 0.5) # Function from library3
