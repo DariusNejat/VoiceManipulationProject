@@ -9,7 +9,7 @@ from libraries import *
 DATA_FOLDER = "data"
 OUTPUT_FOLDER = "output"
 num_segments = 9
-
+segment_duration_ms = 50
 
 
 def main():
@@ -28,7 +28,8 @@ def main():
 
     # Apply the processing pipeline
     print("Applying manipulations...")
-    audiolist = segment_audio_list(audio, sr, num_segments)  # Function from library1
+    #audiolist = segment_audio_list(audio, sr, num_segments)  # Function from library1
+    audiolist = segment_audio_by_duration(audio, sr, segment_duration_ms) #Function from library1
     match method:
         case "mute":
             audiolist = manipulate_segments(audiolist, "mute", sr, 'white', 0.5) # Function from library3
@@ -51,7 +52,7 @@ def main():
 
     # Save in different formats
     # Save the output audio in WAV and MP3 formats.
-    save_audio(audio, sr, OUTPUT_FOLDER, output_name="processed3", output_format="wav")
+    save_audio(audio, sr, OUTPUT_FOLDER, output_name="processed4", output_format="wav")
     # save_audio(audio, sr, OUTPUT_FOLDER, output_name="processed", output_format="mp3", bitrate="256k")
 
 

@@ -2,6 +2,7 @@
 
 # Import functions from all libraries
 from .library1 import segment_audio_list  # Example function from library1.py
+from .library1 import segment_audio_by_duration  # Example function from library1.py
 from .library2 import reverse_segments  # Example function from library2.py
 from .library3 import manipulate_segments  # Example function from library3.py
 from .library4 import save_audio  # Example function from library4.py
@@ -13,6 +14,7 @@ from .library6 import concatenate_segments  # Example function from library6.py
 __all__ = [
     "save_audio",
     "segment_audio_list",
+    "segment_audio_by_duration",
     "reverse_segments",
     "manipulate_segments",
     "smooth_audio_list",
