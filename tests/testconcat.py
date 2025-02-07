@@ -1,5 +1,11 @@
 import unittest
 import numpy as np
+import sys
+import os
+
+# Add the parent directory to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from libraries.library6 import concatenate_segments
 
 class TestConcatenateSegments(unittest.TestCase):
