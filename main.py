@@ -30,7 +30,6 @@ def main():
     audiolist = segment_audio_list(audio, sr, num_segments)  # Function from library1
     match method:
         case "mute":
-            print("You can become a web developer.")
             audiolist = manipulate_segments(audiolist, "mute", sr, 'white', 0.5) # Function from library3
         case "whitenoise":
             audiolist = manipulate_segments(audiolist, "noise", sr, 'white', 0.5) # Function from library3
@@ -44,9 +43,9 @@ def main():
     audio = concatenate_segments(audiolist)  # Function from library6
 
     # Save the output audio
-    output_file = os.path.join(OUTPUT_FOLDER, "manipulated_sample1.wav")
-    sf.write(output_file, audio, sr)
-    print(f"Manipulated audio saved to {output_file}")
+    # output_file = os.path.join(OUTPUT_FOLDER, "manipulated_sample1.wav")
+    # sf.write(output_file, audio, sr)
+    # print(f"Manipulated audio saved to {output_file}")
 
     # Save in different formats
     save_audio(audio, sr, OUTPUT_FOLDER, output_name="processed", output_format="wav")
