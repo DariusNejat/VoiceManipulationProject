@@ -5,18 +5,19 @@ import soundfile as sf
 # Import all functions from the libraries package
 from libraries import *
 
-# Define paths
+# Define pathsm
 DATA_FOLDER = "data"
 OUTPUT_FOLDER = "output"
-num_segments = 6
+num_segments = 9
 
 
 
 def main():
     print("Welcome to the Voice Manipulation Project!")
-    method = input("whats ur manipulation method? type mute or whitenoise or pinknoise or reverse" )
+    method = input("whats ur manipulation method? type mute or whitenoise or pinknoise or reverse \n" )
     # Load a sample audio file
-    input_file = os.path.join(DATA_FOLDER, "sample1.wav")
+    # input_file = os.path.join(DATA_FOLDER, "sample1.wav")
+    input_file = os.path.join(DATA_FOLDER, "microphone-test-68625.mp3")
     if not os.path.exists(input_file):
         print(f"Input file {input_file} not found!")
         return
@@ -39,7 +40,8 @@ def main():
             audiolist = reverse_segments(audiolist,'2 * n + 0')  # Function from library2
         case _:
             print("invalid manipulation input.")
-    audiolist = smooth_audio_list(audiolist, sr, pitch_shift=2)  # Function from library5
+    
+    audiolist = smooth_audio_list(audiolist, sr, fade_percentage=15)  # Function from library5 audio_arrays, sample_rate, fade_percentage=15
     audio = concatenate_segments(audiolist)  # Function from library6
 
     # Save the output audio
@@ -48,8 +50,10 @@ def main():
     # print(f"Manipulated audio saved to {output_file}")
 
     # Save in different formats
-    save_audio(audio, sr, OUTPUT_FOLDER, output_name="processed", output_format="wav")
-    save_audio(audio, sr, OUTPUT_FOLDER, output_name="processed", output_format="mp3", bitrate="256k")
+    # Save the output audio in WAV and MP3 formats.
+    save_audio(audio, sr, OUTPUT_FOLDER, output_name="processed3", output_format="wav")
+    # save_audio(audio, sr, OUTPUT_FOLDER, output_name="processed", output_format="mp3", bitrate="256k")
+
 
 if __name__ == "__main__":
     main()
