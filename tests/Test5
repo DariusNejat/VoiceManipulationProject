@@ -1,6 +1,12 @@
 import unittest
 import numpy as np
-#from .smoothing import smooth_audio_list niyayesh fix this issue
+import sys
+import os
+repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")) 
+sys.path.insert(0, repo_root)
+
+# We import the smooth_audio_function:
+from libraries.library5 import smooth_audio_list  
 
 #This is a test for the smooth_audio_list function.
 
