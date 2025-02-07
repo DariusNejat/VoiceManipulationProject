@@ -47,5 +47,9 @@ def main():
     sf.write(output_file, audio, sr)
     print(f"Manipulated audio saved to {output_file}")
 
+    # Save in different formats
+    save_audio(audio, sr, OUTPUT_FOLDER, output_name="processed", output_format="wav")
+    save_audio(audio, sr, OUTPUT_FOLDER, output_name="processed", output_format="mp3", bitrate="256k")
+
 if __name__ == "__main__":
     main()
