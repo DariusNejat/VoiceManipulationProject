@@ -15,6 +15,7 @@ This project explores voice manipulation techniques, inspired by our university 
 - **Pitch Manipulation**: Adjust the pitch of voices. (for future developement)
 - **Additional Voice Alterations**: Apply other voice parameter modifications. (future developement)
 - **Voice Concatanation**: Merge audio files segement into 1 single audio.
+- **Smooth Audio List**: smoothes the list of audio arrays.
 
 ---
 
