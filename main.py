@@ -1,26 +1,52 @@
 import os
 import librosa
 import soundfile as sf
-
 # Import all functions from the libraries package
 from libraries import *
+
 
 # Define pathsm
 DATA_FOLDER = "data"
 OUTPUT_FOLDER = "output"
-num_segments = 9
-segment_duration_ms = 50
-
 
 def main():
     print("Welcome to the Voice Manipulation Project!")
-    method = input("whats ur manipulation method? type mute or whitenoise or pinknoise or reverse \n" )
-    # Load a sample audio file
-    # input_file = os.path.join(DATA_FOLDER, "sample1.wav")
-    input_file = os.path.join(DATA_FOLDER, "microphone-test-68625.mp3")
-    if not os.path.exists(input_file):
-        print(f"Input file {input_file} not found!")
-        return
+    # Receives and checks Input Duration
+    while True:
+        try:
+            segment_duration_ms = int(input("Please Enter each segment's duration in ms: "))
+            if segment_duration_ms <= 0:
+                print("Duration can't be less than 1 \n")
+                continue
+            break
+        except ValueError:
+            print("The input format is not vaild. try again \n")
+            continue
+        
+    # Receives and checks the File
+    while True:
+        try:
+            file_name = input("Enter the file's name including its extension (It should be present in the data folder): ")
+            input_file = os.path.join(DATA_FOLDER, f"{file_name}")
+            if not os.path.exists(input_file):
+                print(f"Input file {input_file} not found!")
+                continue
+            break
+        except Exception as e:
+            print(e)
+            continue
+        
+    # Receives and checks the method
+    while True:
+        try:
+            method = input("What's your manipulation method? type the number of your method:\n 1. Mute\n 2. Whitenoise\n 3. Pinknoise\n 4. Reverse\n Your choice: " )
+            if method not in ["1","2","3","4"]:
+                print("Invalid input \n")
+                continue
+            break
+        except Exception as e:
+            print(e)
+            continue
 
     # Load the audio and sampling rate
     print("Loading audio file...")
@@ -28,33 +54,34 @@ def main():
 
     # Apply the processing pipeline
     print("Applying manipulations...")
-    #audiolist = segment_audio_list(audio, sr, num_segments)  # Function from library1
+    
     audiolist = segment_audio_by_duration(audio, sr, segment_duration_ms) #Function from library1
     match method:
-        case "mute":
+        case "1":
             audiolist = manipulate_segments(audiolist, "mute", sr, 'white', 0.5) # Function from library3
-        case "whitenoise":
+        case "2":
             audiolist = manipulate_segments(audiolist, "noise", sr, 'white', 0.5) # Function from library3
-        case "pinknoise":
+        case "3":
             audiolist = manipulate_segments(audiolist, "noise", sr, 'pink', 0.5) # Function from library3
-        case "reverse":
-            audiolist = reverse_segments(audiolist,'2 * n + 0')  # Function from library2
+        case "4":
+            audiolist = reverse_segments(audiolist,'1 * n + 0')  # Function from library2
         case _:
             print("invalid manipulation input.")
     
     audiolist = smooth_audio_list(audiolist, sr, fade_percentage=15)  # Function from library5 audio_arrays, sample_rate, fade_percentage=15
     audio = concatenate_segments(audiolist)  # Function from library6
 
-    # Save the output audio
-    # output_file = os.path.join(OUTPUT_FOLDER, "manipulated_sample1.wav")
-    # sf.write(output_file, audio, sr)
-    # print(f"Manipulated audio saved to {output_file}")
 
     # Save in different formats
     # Save the output audio in WAV and MP3 formats.
-    save_audio(audio, sr, OUTPUT_FOLDER, output_name="processed4", output_format="wav")
-    # save_audio(audio, sr, OUTPUT_FOLDER, output_name="processed", output_format="mp3", bitrate="256k")
-
+    while True:
+        try:
+            output_name = input("Enter the Output's name without it's extension: ")
+            break
+        except Exception as e:
+            print(e)
+            continue 
+    save_audio(audio, sr, OUTPUT_FOLDER, output_name=output_name, output_format="wav")
 
 if __name__ == "__main__":
     main()
