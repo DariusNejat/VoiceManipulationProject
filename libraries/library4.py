@@ -1,3 +1,6 @@
+import os
+import soundfile as sf
+
 def save_audio(audio, sr, output_folder, output_name="output", output_format="wav", bitrate="192k"):
     """Saves the processed audio in different formats with optional settings."""
     try:
